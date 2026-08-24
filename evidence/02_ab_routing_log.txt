@@ -1,13 +1,13 @@
 ============================================================
-  B╞░ß╗¢c 2: Prompt Hub & A/B Routing
+  Bước 2: Prompt Hub & A/B Routing
 ============================================================
-Γ£à Config OK  |  Provider: OPENAI  |  Project: day22-lab
-ΓÜá∩╕Å  V1 lß╗ùi: Conflict for /commits/-/nguyen-huy-hoang-rag-prompt-v1. HTTPError('409 Client Error: Conflict for url: https://apac.api.smith.langchain.com/commits/-/nguyen-huy-hoang-rag-prompt-v1', '{"error":"Nothing to commit: prompt has not changed since latest commit"}\n')
-ΓÜá∩╕Å  V2 lß╗ùi: Conflict for /commits/-/nguyen-huy-hoang-rag-prompt-v2. HTTPError('409 Client Error: Conflict for url: https://apac.api.smith.langchain.com/commits/-/nguyen-huy-hoang-rag-prompt-v2', '{"error":"Nothing to commit: prompt has not changed since latest commit"}\n')
-Γåô ─É├ú pull 'nguyen-huy-hoang-rag-prompt-v1' tß╗½ Hub
-Γåô ─É├ú pull 'nguyen-huy-hoang-rag-prompt-v2' tß╗½ Hub
-≡ƒö¿ ─Éang tß║ío FAISS index tß╗½ 107 chunks ...
-Γ£à FAISS vectorstore ─æ├ú sß║╡n s├áng.
+✅ Config OK  |  Provider: OPENAI  |  Project: day22-lab
+⚠️  V1 lỗi: Conflict for /commits/-/nguyen-huy-hoang-rag-prompt-v1. HTTPError('409 Client Error: Conflict for url: https://apac.api.smith.langchain.com/commits/-/nguyen-huy-hoang-rag-prompt-v1', '{"error":"Nothing to commit: prompt has not changed since latest commit"}\n')
+⚠️  V2 lỗi: Conflict for /commits/-/nguyen-huy-hoang-rag-prompt-v2. HTTPError('409 Client Error: Conflict for url: https://apac.api.smith.langchain.com/commits/-/nguyen-huy-hoang-rag-prompt-v2', '{"error":"Nothing to commit: prompt has not changed since latest commit"}\n')
+↓ Đã pull 'nguyen-huy-hoang-rag-prompt-v1' từ Hub
+↓ Đã pull 'nguyen-huy-hoang-rag-prompt-v2' từ Hub
+🔨 Đang tạo FAISS index từ 107 chunks ...
+✅ FAISS vectorstore đã sẵn sàng.
 [01] [prompt-v2] What are the three main types of machine learning?...
 [02] [prompt-v2] What is overfitting in machine learning?...
 [03] [prompt-v1] Explain the bias-variance tradeoff....
@@ -59,5 +59,5 @@
 [49] [prompt-v2] What is Constitutional AI?...
 [50] [prompt-v2] What are common AI safety concerns with LLMs?...
 
-≡ƒôè Routing: V1=19 c├óu | V2=31 c├óu | Tß╗òng=50
-Γ£à B╞░ß╗¢c 2 ho├án th├ánh! Kiß╗âm tra Prompt Hub v├á traces tr├¬n LangSmith.
+📊 Routing: V1=19 câu | V2=31 câu | Tổng=50
+✅ Bước 2 hoàn thành! Kiểm tra Prompt Hub và traces trên LangSmith.

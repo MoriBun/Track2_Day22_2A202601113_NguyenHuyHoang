@@ -1,11 +1,11 @@
 ============================================================
-  B╞░ß╗¢c 3: RAGAS Evaluation
+  Bước 3: RAGAS Evaluation
 ============================================================
-Γ£à Config OK  |  Provider: OPENAI  |  Project: day22-lab
-≡ƒö¿ ─Éang tß║ío FAISS index tß╗½ 107 chunks ...
-Γ£à FAISS vectorstore ─æ├ú sß║╡n s├áng.
+✅ Config OK  |  Provider: OPENAI  |  Project: day22-lab
+🔨 Đang tạo FAISS index từ 107 chunks ...
+✅ FAISS vectorstore đã sẵn sàng.
 
-≡ƒÜÇ ─Éang chß║íy 50 c├óu hß╗Åi vß╗¢i prompt v1 ...
+🚀 Đang chạy 50 câu hỏi với prompt v1 ...
   [01/50] What are the three main types of machine learning?
   [02/50] What is overfitting in machine learning?
   [03/50] Explain the bias-variance tradeoff.
@@ -57,7 +57,7 @@
   [49/50] What is Constitutional AI?
   [50/50] What are common AI safety concerns with LLMs?
 
-≡ƒÜÇ ─Éang chß║íy 50 c├óu hß╗Åi vß╗¢i prompt v2 ...
+🚀 Đang chạy 50 câu hỏi với prompt v2 ...
   [01/50] What are the three main types of machine learning?
   [02/50] What is overfitting in machine learning?
   [03/50] Explain the bias-variance tradeoff.
@@ -109,18 +109,18 @@
   [49/50] What is Constitutional AI?
   [50/50] What are common AI safety concerns with LLMs?
 
-≡ƒôÉ ─Éang ─æ├ính gi├í RAGAS cho prompt v1 ... (vui l├▓ng chß╗¥ ~5-10 ph├║t)
+📐 Đang đánh giá RAGAS cho prompt v1 ... (vui lòng chờ ~5-10 phút)
 
-≡ƒôè Kß║┐t quß║ú RAGAS ΓÇö Prompt V1:
-  faithfulness                  : 0.9628 Γ¡É
+📊 Kết quả RAGAS — Prompt V1:
+  faithfulness                  : 0.9628 ⭐
   answer_relevancy              : 0.9038
   context_recall                : 1.0000
   context_precision             : 0.9350
 
-≡ƒôÉ ─Éang ─æ├ính gi├í RAGAS cho prompt v2 ... (vui l├▓ng chß╗¥ ~5-10 ph├║t)
+📐 Đang đánh giá RAGAS cho prompt v2 ... (vui lòng chờ ~5-10 phút)
 
-≡ƒôè Kß║┐t quß║ú RAGAS ΓÇö Prompt V2:
-  faithfulness                  : 0.9597 Γ¡É
+📊 Kết quả RAGAS — Prompt V2:
+  faithfulness                  : 0.9597 ⭐
   answer_relevancy              : 0.7054
   context_recall                : 1.0000
   context_precision             : 0.9417
@@ -128,10 +128,10 @@
 =================================================================
   Metric                                V1        V2  Winner
 =================================================================
-  faithfulness                      0.9628    0.9597  ΓåÉ V1
-  answer_relevancy                  0.9038    0.7054  ΓåÉ V1
-  context_recall                    1.0000    1.0000  ΓåÉ V2
-  context_precision                 0.9350    0.9417  ΓåÉ V2
+  faithfulness                      0.9628    0.9597  ← V1
+  answer_relevancy                  0.9038    0.7054  ← V1
+  context_recall                    1.0000    1.0000  ← V2
+  context_precision                 0.9350    0.9417  ← V2
 
-Γ£à ─Éß║ít mß╗Ñc ti├¬u: faithfulness = 0.9628 ΓëÑ 0.8
-≡ƒÆ╛ ─É├ú l╞░u b├ío c├ío v├áo D:\VinAI\Day22\Track2_Day22_2A202601113_NguyenHuyHoang\data\ragas_report.json
+✅ Đạt mục tiêu: faithfulness = 0.9628 ≥ 0.8
+💾 Đã lưu báo cáo vào D:\VinAI\Day22\Track2_Day22_2A202601113_NguyenHuyHoang\data\ragas_report.json
