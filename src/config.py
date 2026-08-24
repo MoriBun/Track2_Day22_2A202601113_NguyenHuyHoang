@@ -13,10 +13,23 @@ _root = Path(__file__).parent.parent
 load_dotenv(_root / ".env")
 
 # ── LangSmith — PHẢI set trước khi import LangChain ──────────────────────
-os.environ["LANGCHAIN_TRACING_V2"] = os.getenv("LANGCHAIN_TRACING_V2", "true")
-os.environ["LANGCHAIN_API_KEY"]    = os.getenv("LANGCHAIN_API_KEY", "")
-os.environ["LANGCHAIN_PROJECT"]    = os.getenv("LANGCHAIN_PROJECT", "day22-lab")
-os.environ["LANGCHAIN_ENDPOINT"]   = os.getenv("LANGCHAIN_ENDPOINT", "https://api.smith.langchain.com")
+_langsmith_api_key = os.getenv("LANGSMITH_API_KEY") or os.getenv("LANGCHAIN_API_KEY", "")
+_langsmith_project = os.getenv("LANGSMITH_PROJECT") or os.getenv("LANGCHAIN_PROJECT", "day22-lab")
+_langsmith_tracing = os.getenv("LANGSMITH_TRACING") or os.getenv("LANGCHAIN_TRACING_V2", "true")
+_langsmith_endpoint = os.getenv("LANGSMITH_ENDPOINT") or os.getenv(
+    "LANGCHAIN_ENDPOINT", "https://api.smith.langchain.com"
+)
+
+# LANGSMITH_* la ten bien hien tai; LANGCHAIN_* duoc giu lai de tuong thich
+# voi cac phien ban LangChain/LangSmith cu hon.
+os.environ["LANGSMITH_TRACING"] = _langsmith_tracing
+os.environ["LANGSMITH_API_KEY"] = _langsmith_api_key
+os.environ["LANGSMITH_PROJECT"] = _langsmith_project
+os.environ["LANGSMITH_ENDPOINT"] = _langsmith_endpoint
+os.environ["LANGCHAIN_TRACING_V2"] = _langsmith_tracing
+os.environ["LANGCHAIN_API_KEY"] = _langsmith_api_key
+os.environ["LANGCHAIN_PROJECT"] = _langsmith_project
+os.environ["LANGCHAIN_ENDPOINT"] = _langsmith_endpoint
 
 # ── Provider mặc định ─────────────────────────────────────────────────────
 # Đổi giá trị PROVIDER trong .env: openai | gemini | anthropic | ollama | openrouter
@@ -48,8 +61,8 @@ OPENROUTER_MODEL    = os.getenv("OPENROUTER_MODEL", "openai/gpt-4o-mini")
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
 # ── LangSmith ─────────────────────────────────────────────────────────────
-LANGSMITH_API_KEY = os.getenv("LANGCHAIN_API_KEY", "")
-LANGSMITH_PROJECT = os.getenv("LANGCHAIN_PROJECT", "day22-lab")
+LANGSMITH_API_KEY = _langsmith_api_key
+LANGSMITH_PROJECT = _langsmith_project
 
 
 def validate() -> bool:
@@ -60,7 +73,7 @@ def validate() -> bool:
     missing = []
 
     if not LANGSMITH_API_KEY:
-        missing.append("LANGCHAIN_API_KEY (LangSmith)")
+        missing.append("LANGSMITH_API_KEY (LangSmith)")
 
     if PROVIDER == "openai" and not OPENAI_API_KEY:
         missing.append("OPENAI_API_KEY")
